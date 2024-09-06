@@ -1,200 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: sans-serif;
-
-        }
-        body{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 110%;
-        }
-            .registration-form{
-                max-width: 700px;
-                padding: 28px;
-                margin: 0 20px;
-                box-shadow: 0 15px 20px #ABB2B9;
-            }
-            h2{
-                font-size: 26px;
-                font-weight: 600;
-                text-align: center;
-                color: #2f4f4f;
-                padding-bottom: 8px;
-                border-bottom: 1px solid silver;
-
-            }
-        .content{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            padding: 20px 0;
-
-        }
-        .input-box{
-            display: flex;
-            flex-wrap: wrap;
-            width: 34%;
-        padding-bottom: 15px;
-
-        }
-        .input-box:nth-child(2n){
-            justify-content: end;
-        }
-        .input-box label , .gender-title{
-            width: 95%;
-            color: #2f4f4f;
-            font-weight: bold;
-            margin: 5px 0;
-
-        }
-        .gender-title{
-            font-size: 20px;
-            margin-top: 400px;
-        }
-        
-            .input-box input{
-                height: 40px;
-                width: 95%;
-                padding: 0 10px;
-                border-radius: 5px;
-                border: 1px solid #ccc;
-                outline: none;
-            }
-            .input-box input:is(:focus, :valid){
-                box-shadow: 0 3px 6px rgb(0,0, 0,2);
-            }
-        .gender-catagory{
-            color: grey;
-            margin-top: 8px;
-        }
-        .gender-catagory label{
-            padding: 0 20px 0 5px;
-            font-size: 17px;
-        }
-        .gender-catagory label, .gender-catagory input{
-            cursor: pointer;
-
-        }
-        .button-container{
-           margin: 15px 0;
-        }
-        .button-container button{
-            width: 100%;
-            margin-top: 10px;
-            padding: 10px;
-            display:block;
-            font-size: 20px;
-            color: black;
-            border: none;
-            border-radius: 5px;
-            background-image: -moz-linear-gradient(rgb(136, 102, 112) right);
-            background-color: #680c0c;
-        }
-        .button-container button
-
-
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <title>Document</title>
 </head>
+
 <body>
-<div class="registration-form">
-    <form action="#">
-        <h2>Registration Form</h2>
-        <div class="content">
-            <div class="input-box">
-                <label for="name"> Full Name</label>
-                <input type="text" placeholder="Enter Your Name " name="name" required>
-
-            </div>
-                
-                            <div class="input-box">
-                               <label for="eamil"> Eamil</label>
-                                 <input type="email" placeholder="Enter Email " name="email" required>
-
-                                  </div>
-                                  <div class="input-box">
-                   <label for="uname"> User Name</label>
-                      <input type="text" placeholder="Enter User Name " name="uname" required>
-
-                      </div>
-                      <div class="input-box">
-                      <label>Age:</label>
-         <input type="number" value="age" min="18" max="40" placeholder="18">
-         </div>
-                                        <div class="input-box">
-                                           <label for="Password"> Password</label>
-                                             <input type="password" placeholder="Enter password" name="password" required  >
-
-                                                </div>
-                                                     <div class="input-box">
-                                                       <label for="c-password"> Confirm Password</label>
-                                                          <input type="password"  name="password" required placeholder="Confirm Password">
-                                </div>
-                                <div class="input-box">
-        <label for="country"> Country:</label>
-        <Select> 
-            <option value="">Please Select a Country</option>
-            <option value="pak"> Pakisatn</option>
-            <option value="India"> India</option>
-            <option value="Iran"> Iran</option>
-            <option value="Iraq"> Iraq</option>
-         </Select> 
+    <nav>
+        <div class="logo">
+            <img src="Kingster.png" alt="">
         </div>
-        <div class="input-box">
-            <label for="country-code"> Country code:</label>
-            <Select>
-                <option value="">Please Select a Country code</option>
-                <option value="pak"> 92</option>
-                <option value="India"> 93</option>
-                <option value="Iran"> 94</option>
-                <option value="Iraq"> 95</option>
-             </Select>
-            </div>
-                 
-            
-                  <div class="gender-catagory">
-                    <label class="gender-title">Gender:</label> 
-                <input type="radio" placeholder="" name="gender" required id="male"> Male
-                <input type="radio" placeholder="" name="gender" required id="feamle"> Female
-                <input type="radio" placeholder="" name="gender" required id="other"> Other
-                
-                </div>
-                  <div class="input-box">
-                    <label for="dob"> DOB</label>
-                       <input type="date"  name="dob" >
-    
-                      </div>
-                     <div class="input-box">
-                        <label for="Apply-time">Apply-Time</label>
-                           <input type="time"  name="time" >
-        
-                          </div>
-                          <div div class="input-box">
-                          <input type="file" name="image" required>
-                        </div>
-                         
-                              
-            </div>
-            <div class="button-container">
-                                <label for="Submit"></label>
-                                   <button type="submit"  name="submit" > Register</button>
-                                  
-                
-                                  </div>
-                                 
+        <div class="navigation">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Coureses</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
         </div>
-        
+    </nav>
+    <section id="home"> <!--home start-->
+        <h1>
+            The Best Academy of the state
+        </h1>
+        <p>
+            Kingster Academy
+        </p>
+        <button class="blue">
+            Take A Tour
+        </button>
+    </section> <!--home end-->
+    <section id="features"> <!--feature start-->
+        <h1>Awesome Feature</h1>
+        <p>Repneklish man have thing gathering lights yielding shall you</p>
+        <div class="icons">
+            <div class="feature">
+                <i class="fa fa-university" aria-hidden="true"></i>
+                <h2> University Life</h2>
+                <p>Overall in here</p>
+            </div>
+            <div class="feature">
+                <i class='fas fa-graduation-cap' style='font-size:24px'></i>
+                <h2> Graduation</h2>
+                <p>Getting Diploma</p>
+            </div>
+            <div class="feature">
+                <i class="fa-solid fa-dumbbell"></i>
+                <h2> Athletics</h2>
+                <p>Sport Clubs</p>
+            </div>
+            <div class="feature">
+                <i class="fa-solid fa-square-share-nodes"></i>
+                <h2>Social</h2>
+                <p>Overall in here</p>
+            </div>
+        </div>
+    </section> <!--feature end-->
+    <!--courses--->
+    <section id="courses">
+        <h1>Our Best Courses</h1>
+        <p> Repnelish man have thing gathering lights yielding shall you</p>
        
-    </form>
-</div>
+        <div class="course">
+            <div class="course-1">
+                <img src="java.jpg" alt="java">
+                <div class="details">
+                    <span>Updated 24/8/23</span>
+                    <h4>JavaScript Beginer Course</h4>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(300)</span>
+                    </div> 
+
+                </div> 
+                <div class="price">
+                    $50.56
+                </div> 
+            </div> 
+            <div class="course-1">
+                <img src="css.jpg" alt="css">
+                <div class="details">
+                    <span>Updated 12/6/24</span>
+                    <h4>CSS Beginer Course</h4>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(830)</span>
+                    </div> 
+
+                </div> 
+                <div class="price">
+                    $60.60
+                </div> 
+            </div> 
+
+            <div class="course-1">
+                <img src="andriod.jpg" alt="java">
+                <div class="details">
+                    <span>Updated 11/4/22</span>
+                    <h4>Andriod Premiuem Course</h4>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(212)</span>
+                    </div> 
+
+                </div> 
+                <div class="price">
+                    $56.00
+                </div> 
+            </div> 
+            <div class="course-1">
+                <img src="machine.jpg" alt="java">
+                <div class="details">
+                    <span>Updated 22/5/23</span>
+                    <h4>Machine Learning Advanced Course</h4>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(1200)</span>
+                    </div>
+
+                </div> 
+                <div class="price">
+                    $80.15
+                </div> 
+            </div> 
+            <div class="course-1">
+                <img src="data.jpg" alt="java">
+                <div class="details">
+                    <span>Updated 23/12/20</span>
+                    <h4>Data Analysis Full Course</h4>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(1200)</span>
+                    </div> 
+
+                </div> 
+                <div class="price">
+                    $76.56
+                </div> 
+            </div> 
+
+        </div>
+    </section>
+    <!----registration-->
+    <section id="registration">
+       
+        <div class="timer">
+            <p>Get 100 Online Courses for Free </p>
+            <h1>Register To Get It</h1>
+            <div class="time">
+                <div class="days">
+                    18 <br> Days
+                </div>
+                <div class="days">
+                    23 <br> Hours
+                </div>
+                <div class="days">
+                    20 <br> Mins
+                </div>
+                <div class="days">
+                    33 <br> Sec
+                </div>
+            </div>
+        </div>
+
+        <div class="register">
+            <h3>Create Free Account Now!</h3>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email Address">
+            <input type="text" placeholder="Phone Number">
+            <button class="button">
+                Create Now
+              </button>
+        </div>
+    </section>
+
+    <section id="crew">
+        <h1>Our Experts</h1>
+        <div class="crew-1">
+
+            <div class="crew-2">
+                <img src="man.jpg" alt="">
+                <h4>James Smith</h4>
+                <p>Python $ Algorithm Expert</p>
+                <div class="p-links">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+            </div>
+            <div class="crew-2">
+                <img src="women.jpg" alt="">
+                <h4>Sofia Paul</h4>
+                <p>Data Analyst</p>
+                <div class="p-links">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+            </div>
+            <div class="crew-2">
+                <img src="man1.jpg" alt="">
+                <h4>David Joseph</h4>
+                <p>React JS Expert </p>
+                <div class="p-links">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
 </body>
+
 </html>
